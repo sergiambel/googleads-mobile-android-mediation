@@ -731,10 +731,10 @@ public final class FacebookAdapter
             setHeadline(mNativeAd.getAdHeadline());
             List<com.google.android.gms.ads.formats.NativeAd.Image> images = new ArrayList<>();
             images.add(new FacebookAdapterNativeAdImage(
-                    Uri.parse(mNativeAd.getAdCoverImage().toString())));
+                    Uri.parse(mNativeAd.getAdCoverImage().getUrl().toString())));
             setImages(images);
             setBody(mNativeAd.getAdBodyText());
-            setIcon(new FacebookAdapterNativeAdImage(Uri.parse(mNativeAd.getAdIcon().toString())));
+            setIcon(new FacebookAdapterNativeAdImage(Uri.parse(mNativeAd.getAdIcon().getUrl().toString())));
             setCallToAction(mNativeAd.getAdCallToAction());
 
             mMediaView.setListener(new MediaViewListener() {
